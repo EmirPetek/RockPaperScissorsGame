@@ -1,0 +1,13 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.TasKagitMakas" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your dark theme here. -->
+        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+    </style>
+
+    <color name="play_btn">#2751a3</color>
+    <color name="background">#353535</color>
+    <color name="text_color">#bebfd1</color>
+    <color name="text_color_win">#657dd1</color>
+
+</resources>

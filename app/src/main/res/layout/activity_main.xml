@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="mainActivityObj"
+            type="com.emirpetek.taskagitmakas.MainActivity" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        tools:context=".MainActivity">
+
+        <Button
+            android:id="@+id/buttonPlay"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="90dp"
+            android:backgroundTint="@color/play_btn"
+            android:text="@string/play"
+            android:textSize="34sp"
+            android:onClick="@{() -> mainActivityObj.btnPlay()}"
+            android:textColor="@color/white"
+            android:textStyle="normal|bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="522dp"
+            android:layout_height="233dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="90dp"
+            android:text="@string/game_description"
+            android:textAlignment="center"
+            android:textSize="48sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/buttonPlay"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/buttonPlayOnline"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="@color/play_btn"
+            android:text="@string/play_online"
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            android:onClick="@{() -> mainActivityObj.btnPlayOnline()}"
+            android:textStyle="normal|bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonPlay" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

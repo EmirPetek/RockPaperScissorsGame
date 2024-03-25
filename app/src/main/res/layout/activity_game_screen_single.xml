@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="gameScreenSingleObj"
+            type="com.emirpetek.taskagitmakas.GameScreenSingle" />
+        <variable
+            name="player1Score"
+            type="String" />
+        <variable
+            name="player2Score"
+            type="String" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:backgroundTint="@color/background"
+        tools:context=".GameScreenSingle">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/rock_paper_scissors"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewWinResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Oynamaya başla"
+            android:textColor="@color/text_color_win"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/textViewComputerScore"
+            app:layout_constraintStart_toEndOf="@+id/textViewYourScore"
+            app:layout_constraintTop_toBottomOf="@+id/textViewYourScore" />
+
+        <TextView
+            android:id="@+id/textViewYourScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="16dp"
+            android:text="@{player1Score}"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <TextView
+            android:id="@+id/textViewComputerScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="120dp"
+            android:text="@{player2Score}"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textViewYourScore" />
+
+        <ImageView
+            android:id="@+id/imageViewPlayer1"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewWinResult"
+            app:srcCompat="@android:color/transparent" />
+
+        <ImageView
+            android:id="@+id/imageViewPlayer2"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="230dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewWinResult"
+            app:srcCompat="@android:color/transparent" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="VS"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/imageViewPlayer2"
+            app:layout_constraintStart_toEndOf="@+id/imageViewPlayer1"
+            app:layout_constraintTop_toBottomOf="@+id/textViewWinResult" />
+
+        <Button
+            android:id="@+id/buttonSingleGameRock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="@color/play_btn"
+            android:text="@string/rock"
+            android:onClick="@{() -> gameScreenSingleObj.btnRock()}"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/imageViewPlayer1"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewPlayer1" />
+
+        <Button
+            android:id="@+id/buttonSingleGamePaper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="@color/play_btn"
+            android:text="@string/paper"
+            android:onClick="@{() -> gameScreenSingleObj.btnPaper()}"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@+id/buttonSingleGameScissors"
+            app:layout_constraintStart_toEndOf="@+id/buttonSingleGameRock"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewPlayer1" />
+
+        <Button
+            android:id="@+id/buttonSingleGameScissors"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="@color/play_btn"
+            android:text="@string/scissors"
+            android:onClick="@{() -> gameScreenSingleObj.btnScissor()}"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/imageViewPlayer2"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewPlayer2" />
+
+        <TextView
+            android:id="@+id/textViewResetScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:onClick="@{() -> gameScreenSingleObj.resetScore()}"
+            android:text="@string/reset_score"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

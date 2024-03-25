@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Tas Kagit Makas</string>
+    <string name="play">OYNA</string>
+    <string name="play_online">ÇEVRİMİÇİ OYNA</string>
+    <string name="game_description">Bilgisayara karşı veya çevrimiçi Taş Kağıt Makas oyna</string>
+    <string name="rock_paper_scissors">Taş Kağıt Makas</string>
+    <string name="player_score">Senin Skorun:</string>
+    <string name="player_computer">Bilgisayarın Skoru:</string>
+    <string name="rock">TAŞ</string>
+    <string name="paper">KAĞIT</string>
+    <string name="scissors">MAKAS</string>
+    <string name="win">KAZANDINIZ!</string>
+    <string name="draw">BERABERE!</string>
+    <string name="win_computer">BİLGİSAYAR KAZANDI!</string>
+    <string name="your_score">Skorun: </string>
+    <string name="computer_score">Bilgisayarın skoru: </string>
+    <string name="reset_score">Skoru Sıfırla</string>
+    <string name="sure_for_reset_score">Skoru sıfırlamak istediğinizden emin misiniz?</string>
+    <string name="yes">Evet</string>
+    <string name="cancel">İptal</string>
+    <string name="create_room">ODA OLUŞTUR</string>
+    <string name="join_room">ODAYA KATIL</string>
+</resources>
